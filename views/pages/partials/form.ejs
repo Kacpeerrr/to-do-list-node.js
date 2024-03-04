@@ -1,0 +1,25 @@
+<form method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Nazwa zadania</label>
+        <input type="text" id="title" value="<%= form.title %>"
+            class="form-control <%= errors?.title ? 'is-invalid' : ''  %>" name="title">
+        <% if (errors?.title) { %>
+            <div class="invalid-feedback">
+                <%= errors.title.message %>
+            </div>
+            <% }%>
+    </div>
+    <div class="mb-3">
+        <label for="desc" class="form-label">Opis</label>
+        <textarea name="description" id="desc"
+            class="form-control <%= errors?.description ? 'is-invalid' : ''  %>"><%= form.description %></textarea>
+        <% if (errors?.description) { %>
+            <div class="invalid-feedback">
+                <%= errors.description.message %>
+            </div>
+            <% }%>
+    </div>
+    <button class="btn btn-primary">
+        <%= textButton %>
+    </button>
+</form>

@@ -1,0 +1,19 @@
+0. npm install; npm run watch
+
+1. Przygotuj widoki dla listy TODO
+- zapis (tworzenie nowego zadania)
+- edycje (zmiana treści, oznaczanie zadania jako ukończonego)
+- usuwanie
+
+2. Dodaj body parser dla application/x-www-form-urlencoded
+
+3. Opcjonalne: Przygotuj middleware, który przekaże dodatkowe zmienne do widoku 
+(może być w pliku app.ejs lub jako oddzielny plik w app/middelware)
+
+4. Widoki powinny obsługiwać (zaimplementowaną) walidaje oraz stan inputów
+
+Należy edytować pliki:
+- app/controllers/task-controller.js
+- views/tasks/
+- app/app.js
+- middewares/
